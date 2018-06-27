@@ -1,0 +1,91 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	font-family: 'Roboto', sans-serif;
+	background-color: #161616;
+}
+
+* {
+	box-sizing: inherit;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.calc {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: auto repeat(5, 1fr);
+	grid-gap: 1px;
+	
+	border-radius: 7px;
+	overflow: hidden;
+	
+	transition: transform 333ms ease-in-out;
+	background-color: #323232;
+	box-shadow: 0 4px 16px -4px black;
+}
+
+.output {
+	grid-column-start: 1;
+	grid-column-end: 5;
+	
+	display: flex;
+	flex-direction: column-reverse;
+	
+	padding: 3px 10px;
+	height: 80px;
+	
+	max-width: 200px;
+	overflow-x: auto;
+	text-align: right;
+	font-size: 36px;
+	color: white;
+}
+
+.zero {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	width: auto;
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	border-color: #c5e3f6;
+	
+	height: 40px;
+	width: 50px;
+	
+	font-family: inherit;
+	font-size: 16px;
+	color: black;
+	
+	background-color: white;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #ddd;
+}
+
+button:active {
+	background-color: #bbb;
+}
+
+.spin {
+	transform: rotate(180deg);
+	transition: transform 333ms ease-in-out;
+}
