@@ -1,2 +1,2 @@
 # Calc
-https://shirimasen.github.io/Calc/
+https://badgyro.github.io/Calc/
